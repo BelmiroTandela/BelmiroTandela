@@ -29,8 +29,8 @@
 	  
 	  
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
-	    <div class="container">
-	      <a class="navbar-brand" href="javascript:void(0)">Belmiro</a>
+	    <div class="container animacao_links">
+	      <a class="navbar-brand" href="#about-section">Belmiro</a>
 	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle sinza" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
@@ -44,25 +44,27 @@
 	          <li class="nav-item"><a href="#skills-section" class="nav-link"><span>Competências</span></a></li>
 	          <li class="nav-item"><a href="#projects-section" class="nav-link"><span>Projectos</span></a></li>
 	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contactos</span></a></li>
+	          <li class="nav-item item_play"><a href="javascript:void(0)" class="nav-link"><span class="icon"><i class="icon-play_circle_outline play reproduzir"></i></span></a></li>
+	          <li class="nav-item item_pause"><a href="javascript:void(0)" class="nav-link"><span class="icon"><i class="icon-pause_circle_outline pause reproduzir"></i></span></a></li>
 	        </ul>
 	      </div>
 	    </div>
 	  </nav>
 	  <section id="home-section" class="hero">
-		  <div class="home-slider  owl-carousel">
+		  <div class="home-slider owl-carousel">
 	      <div class="slider-item ">
 	      	<div class="overlay"></div>
 	        <div class="container">
 	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-	          	<div class="one-third js-fullheight order-md-last img img-fluid" style="background-image:url(images/pri.png);">
+	          	<div class="one-third js-fullheight order-md-last img img-fluid impedir_opcao" style="background-image:url(images/pri.png);">
 	          		<div class="overlay"></div>
 	          	</div>
 		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
 		          	<div class="text animacao_links">
 		          		<span class="subheading">Olá!</span>
-			            <h1 class="mb-4 mt-3">Eu sou <span>Belmiro Tandela</span></h1>
+			            <h1 class="mb-4 mt-3">Eu sou <span>Belmiro Tandela.</span></h1>
 			            <h2 class="mb-4">Um Desenvolvedor Web</h2>
-			            <p><a href="#projects-section" class="btn btn-white btn-outline-white py-3 px-4 mb-2 mx-2">Meus Trabalhos</a><a href="#contact-section" class="btn btn-primary py-3 px-4">Contracte Me</a></p>
+			            <p class="botao_home"><a href="#projects-section" class="btn btn-white btn-outline-white py-3 px-4 mb-2 mx-2">Meus Trabalhos</a><a href="#contact-section" class="btn btn-primary py-3 px-4">Contracte Me</a></p>
 		            </div>
 		          </div>
 	        	</div>
@@ -79,8 +81,8 @@
 		          <div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
 		          	<div class="text animacao_links">
 		          		<span class="subheading">Olá!</span>
-			            <h1 class="mb-4 mt-3 text-break">Eu sou um <span>Desenvolvedor Web e Mobile</span> residente em Luanda</h1>
-			            <p><a href="#projects-section" class="btn btn-white btn-outline-white py-3 px-4 mb-2 mx-2">Meus Trabalhos</a><a href="#contact-section" class="btn btn-primary py-3 px-4">Contracte Me</a></p>
+			            <h1 class="mb-4 mt-3 text-break">Eu sou um <span>Desenvolvedor Web e Mobile</span> residente em Luanda.</h1>
+			            <p class="botao_home"><a href="#projects-section" class="btn btn-white btn-outline-white py-3 px-4 mb-2 mx-2">Meus Trabalhos</a><a href="#contact-section" class="btn btn-primary py-3 px-4">Contracte Me</a></p>
 		            </div>
 		          </div>
 	        	</div>
@@ -92,7 +94,7 @@
     <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
     	<div class="container">
     		<div class="row d-flex">
-    			<div class="col-md-6 col-lg-5 d-flex">
+    			<div class="col-md-6 col-lg-5 d-flex impedir_opcao">
     				<div class="img-about img d-flex align-items-stretch">
     					<div class="overlay"></div>
 	    				<div class="img d-flex align-self-stretch align-items-center" style="background-image:url(images/sec.png);">
@@ -108,9 +110,9 @@
 		            <ul class="about-info mt-4 px-md-0 px-2">
 		            	<li class="d-flex"><span>Nome:</span> <span>Belmiro Tandela</span></li>
 		            	<li class="d-flex"><span>Idade:</span> <span id="idade"></span></li>
-		            	<li class="d-flex"><span>Endereço</span> <span>Luanda, Angola</span></li>
+		            	<li class="d-flex"><span>Endereço</span> <span>Luanda, Angola 🇦🇴</span></li>
 		            	<li class="d-flex"><span>E-mail:</span> <span class="text-break">belmirotandela@gmail.com</span></li>
-		            	<li class="d-flex"><span>Telefone: </span> <span>+244 924244917 / +244 953983784</span></li>
+		            	<li class="d-flex"><span>Telefone: </span> <span>+244 924244917 / +244 923469242</span></li>
 		            </ul>
 		          </div>
 		        </div>
@@ -139,16 +141,16 @@
     		<div class="row">
 				<div class="col-md-6">
 					<div class="resume-wrap ftco-animate">
-						<span class="date">Explorador da Matemática</span>
-						<h2>Desvendando o Mundo dos Números</h2>
+						<span class="date">2016 - <span class="ano_corrente"></span></span>
+						<h2>Mundo dos Números</h2>
 						<span class="position">Além dos Dígitos, a Paixão pela Lógica</span>
 						<p class="mt-4">Assim como desvendo os segredos dos números, também busco desafios que envolvam a lógica matemática. Cada equação é um quebra-cabeça que ansiosamente resolvo, e cada teorema é uma descoberta emocionante. Minha paixão pela matemática é inesgotável, e estou sempre em busca de novos horizontes para explorar e desvendar.</p>
 					</div>
 				</div>
     			<div class="col-md-6">
     				<div class="resume-wrap ftco-animate">
-    					<span class="date">Desenvolvedor Teen Criativo</span>
-    					<h2>Transformando Código em Experiências Únicas</h2>
+    					<span class="date">2020 - <span class="ano_corrente"></span></span>
+    					<h2>Experiências Únicas</h2>
     					<span class="position">Paixão pela Programação além da Idade</span>
     					<p class="mt-4">Sou um jovem desenvolvedor apaixonado por transformar linhas de código em experiências digitais incríveis. <strong>A minha idade não define a minha capacidade,</strong> pelo contrário, é um reflexo da minha paixão e dedicação à programação. Combinando criatividade e habilidades técnicas, estou empenhado em enfrentar desafios complexos e criar soluções que inspirem e surpreendam.</p>
     				</div>
@@ -156,9 +158,9 @@
 
     			<div class="col-md-6">
     				<div class="resume-wrap ftco-animate">
-    					<span class="date">Desenvolvedor Multifacetado</span>
-    					<h2>Construindo Projetos Inovadores com Determinação</h2>
-    					<span class="position">Habilidades Versáteis para Soluções Tecnológicas de Qualidade</span>
+    					<span class="date">2022 - <span class="ano_corrente"></span></span>
+    					<h2>Projetos Inovadores</h2>
+    					<span class="position">Soluções Tecnológicas de Qualidade</span>
     					<p class="mt-4">Com apenas <span id="idade_experiencia"></span> anos, já construí um portfólio sólido de projetos de desenvolvimento. Minhas habilidades abrangem programação em HTML, CSS, JS, DART(FLUTTER), desenvolvimento web e criação de aplicativos móveis. <strong>Acredito que a tecnologia não tem limites de idade,</strong> e estou determinado a provar que, mesmo como um adolescente, posso entregar soluções de alta qualidade que atendam às necessidades dos meus clientes.</p>
     				</div>
     			</div>
@@ -182,7 +184,7 @@
 								<i class="icon-web"></i>
 							</span>
 							<div class="desc">
-								<h3 class="mb-5">Desinger/Desenvolvedor Web</h3>
+								<h3 class="mb-5">Desinger Web</h3>
 							</div>
 						</a>
 					</div>
@@ -290,11 +292,11 @@
             <p>Meus projetos são mais do que linhas de código; são soluções que transformam ideias em realidade. Cada projeto é uma oportunidade de inovar, criando experiências digitais que deixam uma impressão duradoura e demonstram minha paixão pelo desenvolvimento tecnológico.</p>
           </div>
         </div>
-			<a href="https://agilizaio.ao" target="_blank">
+			<a href="https://agilizaio.ao" target="_blank" class="impedir_opcao">
 				<div class="row justify-content-center">
 					<div class="col-md-8">
 						<div class="project img ftco-animate d-flex justify-content-center align-items-center"
-							style="background: url(images/agiliza.png) rgba(0, 0, 0, 0.5);object-fit: cover;height: 400px;">
+							style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(images/agiliza.png);background-size: cover;background-repeat: no-repeat;background-position: center, center;height: 400px;">
 							<div class="overlay"></div>
 							<div class="text text-center p-4">
 								<h3><a href="https://agilizaio.ao" target="_blank">Agiliza IO</a></h3>
@@ -337,8 +339,8 @@
           <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
             <div class="block-18">
               <div class="text">
-                <strong class="number" data-number="20">0</strong>
-                <span>Xícara de Chá</span>
+                <strong class="number" data-number="0">0</strong>
+                <span>Prêmios</span>
               </div>
             </div>
           </div>
@@ -348,11 +350,11 @@
 
     <section class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
 			<div class="container animacao_links">
-				<div class="row justify-content-center animacao_links">
-					<div class="col-md-7 ftco-animate text-center">
+				<div class="row justify-content-center ">
+					<div class="col-md-7 ftco-animate text-center animacao_links">
 						<h2>Estou <span>Disponível</span> para Trabalhos</h2>
 						<p>Com minhas habilidades de desenvolvimento afiadas e paixão pela criação de soluções digitais de alta qualidade, estou pronto para encarar novos projetos freelance. Seja a construção de um website dinâmico, a criação de um aplicativo inovador ou o desenvolvimento de interfaces interativas, estou à disposição para transformar suas ideias em realidade.</p>
-						<p class="mb-0"><a href="#contact-section" class="btn btn-primary py-3 px-5">Contrate-me</a></p>
+						<p class="mb-0 animacao_links"><a href="#contact-section" class="btn btn-primary py-3 px-5">Contrate-me</a></p>
 					</div>
 				</div>
 			</div>
@@ -384,7 +386,7 @@
           			<span class="icon-phone2"></span>
           		</div>
           		<h3 class="mb-4">Número de Telefone</h3>
-	            <p><a href="tel://924244917">+244 924244917</a> / <a href="tel://953983784">+244 953983784</a></p>
+	            <p><a href="tel://924244917">+244 924244917</a> / <a href="tel://923469242">+244 923469242</a></p>
 	          </div>
           </div>
           <div class="col-md-6 col-lg-3 d-flex ftco-animate">
@@ -402,7 +404,7 @@
           			<span class="icon-globe"></span>
           		</div>
           		<h3 class="mb-4">Website</h3>
-	            <p><a href="javascript:void(0)">belmirotandela.me</a></p>
+	            <p class="animacao_links text-break"><a href="#home-section">https://belmirotandela.github.io/belmirotandela/</a></p>
 	          </div>
           </div>
         </div>
@@ -422,6 +424,7 @@
                 <li class="ftco-animate"><a href="https://www.facebook.com/tandelux/" target="_blank"><span class="icon-facebook"></span></a></li>
                 <li class="ftco-animate"><a href="https://instagram.com/tandelux/" target="_blank"><span class="icon-instagram"></span></a></li>
                 <li class="ftco-animate"><a href="https://wa.me/+244924244917" target="_blank"><span class="icon-whatsapp"></span></a></li>
+                <li class="ftco-animate"><a href="mailto:belmirotandela@gmail.com" target="_blank"><span class="icon-mail_outline"></span></a></li>
               </ul>
             </div>
           </div>
@@ -452,7 +455,7 @@
             	<div class="block-23 mb-3">
 	              <ul>
 	                <li><span class="icon icon-map-marker"></span><span class="text">Gamek Vila, Luanda, Angola</span></li>
-	                <li><span class="icon icon-phone"></span><span class="text"><a href="tel://924244917">+244 924244917</a> / <a href="tel://953983784">+244 953983784</a></span></li>
+	                <li><span class="icon icon-phone"></span><span class="text"><a href="tel://924244917">+244 924244917</a> / <a href="tel://923469242">+244 923469242</a></span></li>
 	                <li><a href="mailto:belmirotandela@gmail.com"><span class="icon icon-envelope"></span><span class="text">belmirotandela@gmail.com</span></a></li>
 	              </ul>
 	            </div>
