@@ -65,29 +65,28 @@
 
 	var onePageClick = function() {
 
-
 		$(document).on('click', '.animacao_links a[href^="#"]', function (event) {
-	    event.preventDefault();
+			event.preventDefault();
 
-	    var href = $.attr(this, 'href');
+			var href = $.attr(this, 'href');
 
-	    $('html, body').animate({
-	        scrollTop: $($.attr(this, 'href')).offset().top - 70
-	    }, 500, function() {
-	    	// window.location.hash = href;
-	    });
+			$('html, body').animate({
+				scrollTop: $($.attr(this, 'href')).offset().top - 70
+			}, 500, function() {
+				// window.location.hash = href;
+			});
 		});
 
 		$(document).on('click', '#ftco-nav a[href^="#"]', function (event) {
-	    event.preventDefault();
+			event.preventDefault();
 
-	    var href = $.attr(this, 'href');
+			var href = $.attr(this, 'href');
 
-	    $('html, body').animate({
-	        scrollTop: $($.attr(this, 'href')).offset().top - 70
-	    }, 500, function() {
-	    	// window.location.hash = href;
-	    });
+			$('html, body').animate({
+				scrollTop: $($.attr(this, 'href')).offset().top - 70
+			}, 500, function() {
+				// window.location.hash = href;
+			});
 		});
 
 	};
@@ -197,12 +196,12 @@
 				$('.number').each(function(){
 					var $this = $(this),
 						num = $this.data('number');
-						console.log(num);
+						// console.log(num);
 					$this.animateNumber(
 					  {
 					    number: num,
 					    numberStep: comma_separator_number_step
-					  }, 7000
+					  }, 5000
 					);
 				});
 				
@@ -300,4 +299,113 @@ function Idade() {
 	document.querySelector("#experiencia").setAttribute("data-number", anosdeExperiencia)
 }
 
+function AnoCorrente() {
+	const anoAtual = new Date().getFullYear();
+	const anocorrent = document.querySelectorAll(".ano_corrente")
+	anocorrent.forEach(elemento => {
+		elemento.textContent = anoAtual
+	})
+}
+
+function ImpedirOpcao() {
+	document.addEventListener('contextmenu', (event) => {
+		let isAnchorOrChild = false;
+		let target = event.target;
+	  
+		while (target !== null) {
+			if (target.tagName === 'A' || target.tagName === 'BUTTON') {
+				isAnchorOrChild = true;
+				break;
+			}
+			target = target.parentElement;
+		}
+	  
+		if (!isAnchorOrChild) {
+			event.preventDefault(); // Impede o menu de contexto padrão
+			Notiflix.Notify.warning('Essa opção não é permitida.');
+		}
+	  });
+}
+
+function checkDevice() { 
+	if(navigator.userAgent.match(/Android/i)
+	|| navigator.userAgent.match(/webOS/i)
+	|| navigator.userAgent.match(/iPhone/i)
+	|| navigator.userAgent.match(/iPad/i)
+	|| navigator.userAgent.match(/iPod/i)
+	|| navigator.userAgent.match(/BlackBerry/i)
+	|| navigator.userAgent.match(/Windows Phone/i)
+	){
+		const home = document.querySelector(".owl-carousel.home-slider")
+		const botoes_home = document.querySelectorAll(".botao_home")
+		home.style.zIndex = "-111"
+		botoes_home.forEach(botoes => {
+			botoes.style.opacity = "0"
+		})
+	} else {
+		const home = document.querySelector(".owl-carousel.home-slider")
+		const botoes_home = document.querySelectorAll(".botao_home")
+		home.style.zIndex = "0"
+		botoes_home.forEach(botoes => {
+			botoes.style.opacity = "1"
+		})
+	 }
+}
+
+function AudioVisual() { 
+	const botao_reproduzir = document.querySelector(".reproduzir")
+	const pause = document.querySelector(".pause")
+	const item_pause = document.querySelector(".item_pause")
+	const item_play = document.querySelector(".item_play")
+	let reproduzido = false;
+	botao_reproduzir.addEventListener("click", e => {
+		if ('speechSynthesis' in window) {
+			const synth = window.speechSynthesis;
+
+			if (reproduzido) {
+				synth.resume(true)
+				pause.style.display = "block"
+				item_pause.style.display = "block"
+				botao_reproduzir.style.display = "none"
+				item_play.style.display = "none"
+			} else {
+				const anoAtual = new Date().getFullYear();
+				const Idade = anoAtual - 2009;
+				const anosdeExperiencia = anoAtual - 2020;
+				let mensagem = "Olá!, eu me chamo Belmiro Tandela!, Eu sou um desenvolvedor web e mobaile, eu resido em Luanda, e com apenas "+Idade+" anos de idade, eu tenho um portfólio sólido de projetos de desenvolvimento. Minhas habilidades abrangem programação em HTML, CSS, JavaScript, FLUTTER, ou seja, desenvolvo aplicativos web e aplicativos móveis. Eu Belmiro Tandela tenho "+anosdeExperiencia+" anos de experiência em programação, tenho 1 projecto criado, tenho 1 cliente satispeito, e por enquanto ainda não tenho nenhum prêmio!. É com muito orgulho que eu me dedico a criar inovações no mundo digital. Portanto eu defendo sempre que: A minha idade não define a minha capacidade, pelo contrário, é um reflexo da minha paixão e dedicação à programação. Acredito que a tecnologia não tem limites de idade. Eu Belmiro Tandela participei em algumas partes do beck-ende, da plataforma: Agiliza IO, uma plataforma que visa verificar a veracidade dos comprovativos bancários. Além da programação eu Belmiro Tandela também tenho uma paixão enorme pêlos os números, ou seja, pela a matemática. Cada equação é um quebra-cabeça que ansiosamente resolvo, e cada teorema é uma descoberta emocionante. Minha paixão pela matemática é inesgotável, e estou sempre em busca de novos horizontes para explorar e desvendar. Portanto, estou disponível para qualquer tipo de trabalho que envolva a criação de aplicativos web, e tanto como aplicativos mobaile. Entre em contacto comigo para obter mais informações!!, nunca liga para terceiros!. Obrigado!";
+				const utterance = new SpeechSynthesisUtterance(mensagem);
+				const lingua_navegador = navigator.language
+			
+				// Define a linguagem para português
+				utterance.lang = lingua_navegador;
+			
+				// Define a velocidade normal (1.0 é a velocidade padrão)
+				utterance.rate = 1.0;
+			
+				synth.speak(utterance);
+				reproduzido = true
+				pause.style.display = "block"
+				item_pause.style.display = "block"
+				botao_reproduzir.style.display = "none"
+				item_play.style.display = "none"
+	
+				pause.addEventListener("click", pausa => {
+					synth.pause(true)
+					pause.style.display = "none"
+					item_pause.style.display = "none"
+					botao_reproduzir.style.display = "block"
+					item_play.style.display = "block"
+				})
+			}
+		} else {
+			  Notiflix.Report.failure("Funcionalidade de Fala não suportado", "A funcionalidade de síntese de fala não é suportada por este navegador.", "Entendi");
+		}
+	})
+	
+}
+
+checkDevice()
+ImpedirOpcao()
 Idade()
+AnoCorrente()
+AudioVisual()
