@@ -374,13 +374,23 @@ function AudioVisual() {
 				const anosdeExperiencia = anoAtual - 2020;
 				let mensagem = "Olá!, eu me chamo Belmiro Tandela!, Eu sou um desenvolvedor web e mobaile, eu resido em Luanda, e com apenas "+Idade+" anos de idade, eu tenho um portfólio sólido de projetos de desenvolvimento. Minhas habilidades abrangem programação em HTML, CSS, JavaScript, FLUTTER, ou seja, desenvolvo aplicativos web e aplicativos móveis. Eu Belmiro Tandela tenho "+anosdeExperiencia+" anos de experiência em programação, tenho 1 projecto criado, tenho 1 cliente satispeito, e por enquanto ainda não tenho nenhum prêmio!. É com muito orgulho que eu me dedico a criar inovações no mundo digital. Portanto eu defendo sempre que: A minha idade não define a minha capacidade, pelo contrário, é um reflexo da minha paixão e dedicação à programação. Acredito que a tecnologia não tem limites de idade. Eu Belmiro Tandela participei em algumas partes do beck-ende, da plataforma: Agiliza IO, uma plataforma que visa verificar a veracidade dos comprovativos bancários. Além da programação eu Belmiro Tandela também tenho uma paixão enorme pêlos os números, ou seja, pela a matemática. Cada equação é um quebra-cabeça que ansiosamente resolvo, e cada teorema é uma descoberta emocionante. Minha paixão pela matemática é inesgotável, e estou sempre em busca de novos horizontes para explorar e desvendar. Portanto, estou disponível para qualquer tipo de trabalho que envolva a criação de aplicativos web, e tanto como aplicativos mobaile. Entre em contacto comigo para obter mais informações!!, nunca liga para terceiros!. Obrigado!";
 				const utterance = new SpeechSynthesisUtterance(mensagem);
-				const lingua_navegador = navigator.language
 			
 				// Define a linguagem para português
-				utterance.lang = lingua_navegador;
+				utterance.lang = "pt-PT";
 			
 				// Define a velocidade normal (1.0 é a velocidade padrão)
 				utterance.rate = 1.0;
+
+				// Adiciona o evento `onend`
+				utterance.onend = () => {
+					// A voz já parou de falar
+					reproduzido = false;
+
+					pause.style.display = "none"
+					item_pause.style.display = "none"
+					botao_reproduzir.style.display = "block"
+					item_play.style.display = "block"
+				};
 			
 				synth.speak(utterance);
 				reproduzido = true
